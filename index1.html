@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vaishnavi Yadav - B.Tech Fresher Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Typed.js -->
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+  <!-- AOS Library for scroll animations -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <style>
+    * {margin:0; padding:0; box-sizing:border-box;}
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #0b0b2f;
+      color: #fff;
+      scroll-behavior: smooth;
+    }
+    a {text-decoration:none; color: inherit;}
+
+    /* Header / Nav */
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background-color: #12124a;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 40px;
+      height: 65px;
+    }
+    .logo {font-size:1.4rem; font-weight:600; color:#ff9800;}
+    nav ul {display:flex; gap:20px; list-style:none;}
+    nav ul li {cursor:pointer; transition:0.3s;}
+    nav ul li:hover, nav ul li.active {color:#ff9800;}
+
+    /* Sections */
+    section {padding:80px 10%; min-height:auto;}
+    h2 {color:#ff9800; font-size:1.8rem; margin-bottom:15px;}
+    p {color:#ccc; line-height:1.5; font-size:0.95rem;}
+
+    /* Hero Section */
+    .hero {
+      display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center;
+      padding-top:120px; /* header offset */
+    }
+    .hero-text {flex:1; min-width:280px; font-size:2rem;}
+    .hero-text span {color:#ff9800; font-weight:bold;}
+    .hero-text p {margin-top:15px; font-size:1rem; color: #ccc;}
+    .hero-buttons {margin-top:20px;}
+    .hero-buttons a {
+      display:inline-block;
+      padding:8px 20px;
+      background:#ff9800;
+      color:#000;
+      font-weight:600;
+      border-radius:6px;
+      margin-right:10px;
+      transition:0.3s;
+      font-size:0.9rem;
+    }
+    .hero-buttons a:hover {background:#e67e22; transform: scale(1.05);}
+
+    .hero-img {flex:1; min-width:280px; text-align:center;}
+    .hero-img img {max-width:400px; width:100%; border-radius:10px;}
+
+    /* Skills Section */
+    .skills .skill-list {
+      display:flex; flex-wrap:wrap; gap:12px;
+    }
+    .skill-item {
+      background:#1a1a5e; padding:8px 15px; border-radius:6px;
+      font-weight:600; font-size:0.9rem; transition:0.3s;
+    }
+    .skill-item:hover {background:#ff9800; color:#000; transform: scale(1.05);}
+
+    /* Projects Section */
+    .projects .project-list {
+      display:flex; flex-wrap:wrap; gap:15px;
+    }
+    .project-card {
+      background:#1a1a5e; padding:15px; border-radius:8px;
+      flex:1; min-width:220px; transition:transform 0.3s, background 0.3s;
+      font-size:0.95rem;
+    }
+    .project-card:hover {transform: scale(1.05); background:#ff9800; color:#000;}
+
+    /* Contact Section */
+    .contact p, .contact a {color:#ccc; margin-bottom:8px; font-size:0.95rem;}
+    .contact a:hover {color:#ff9800;}
+
+    /* Footer */
+    footer {background:#12124a; text-align:center; padding:15px; margin-top:30px; color:#ccc; font-size:0.9rem;}
+
+    /* Responsive */
+    @media(max-width:768px) {
+      nav {padding:0 15px;}
+      section {padding:60px 5%;}
+      .hero {flex-direction:column;}
+      .hero-text {text-align:center; font-size:1.8rem;}
+      .hero-buttons {text-align:center;}
+      .hero-img {margin-top:20px;}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header>
+    <nav>
+      <div class="logo">Vaishnavi Yadav</div>
+      <ul id="nav-links">
+        <li class="active"><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home" data-aos="fade-up">
+    <div class="hero-text">
+      Hi, I am <span>Vaishnavi Yadav</span><br>
+      A <span id="typed-text"></span>
+      <p>I am a B.Tech fresher passionate about web development and coding.</p>
+      <div class="hero-buttons">
+        <a href="Vaishnavi_Resume.pdf" download>Download Resume</a>
+        <a href="#contact">Contact Me</a>
+      </div>
+    </div>
+    <div class="hero-img" data-aos="zoom-in">
+      <img src="Vaishnavi.jpg" alt="Profile Image">
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section class="about" id="about" data-aos="fade-right">
+    <h2>About Me</h2>
+    <p>I am a B.Tech fresher skilled in web development, programming, and building real-world projects. My core skills include HTML, CSS, JavaScript, React JS, Node JS, C++, and Python. I am enthusiastic about learning new technologies and creating innovative solutions.</p>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills" id="skills" data-aos="fade-left">
+    <h2>My Skills</h2>
+    <div class="skill-list">
+      <div class="skill-item">HTML</div>
+      <div class="skill-item">CSS</div>
+      <div class="skill-item">JavaScript</div>
+      <div class="skill-item">React JS</div>
+      <div class="skill-item">Node JS</div>
+      <div class="skill-item">C++</div>
+      <div class="skill-item">Python</div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects" id="projects" data-aos="fade-up">
+    <h2>Projects</h2>
+    <div class="project-list">
+      <div class="project-card" data-aos="flip-left">
+        <h3>Portfolio Website</h3>
+        <p>Created a responsive personal portfolio website using HTML, CSS, and JS to showcase skills and projects.</p>
+      </div>
+      <div class="project-card" data-aos="flip-left" data-aos-delay="100">
+        <h3>ToDo App</h3>
+        <p>Built a dynamic ToDo app using JavaScript to practice DOM manipulation and localStorage.</p>
+      </div>
+      <div class="project-card" data-aos="flip-left" data-aos-delay="200">
+        <h3>Mini E-commerce</h3>
+        <p>Developed a small e-commerce front-end using React JS to demonstrate state management and components.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact" data-aos="fade-up">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:2k22.it.32214@gmail.com">2k22.it.32214@gmail.com</a></p>
+    <p>Phone: <a href="tel:+916392101724">+91 6392101724</a></p>
+    <p>LinkedIn: <a href="#">linkedin.com/in/vaishnavi</a></p>
+    <p>GitHub: <a href="#">github.com/vaishnavi</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Vaishnavi Yadav. All rights reserved.
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    var typed = new Typed("#typed-text", {
+      strings: ["Web Developer", "Frontend Developer", "Backend Developer", "Full Stack Developer"],
+      typeSpeed: 50,
+      backSpeed: 50,
+      loop: true,
+    });
+
+    AOS.init({duration:1000, once:true});
+
+    // Highlight nav link on scroll
+    const sections = document.querySelectorAll('section');
+    const navLi = document.querySelectorAll('#nav-links li');
+    window.addEventListener('scroll', ()=>{
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 80;
+        if(pageYOffset >= sectionTop){
+          current = section.getAttribute('id');
+        }
+      });
+      navLi.forEach(li => {
+        li.classList.remove('active');
+        if(li.querySelector('a').getAttribute('href') === '#' + current){
+          li.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
